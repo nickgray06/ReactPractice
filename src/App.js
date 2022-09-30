@@ -34,8 +34,42 @@ function App() {
   };
   var x = 25,
     y = 30;
+  let element = null;
+  let isLoggedIn = false;
+  if (isLoggedIn) {
+    element = <h2>Welcome Admin</h2>;
+  } else {
+    element = <h2>Please Log In</h2>;
+  }
+  var employees = [
+    { empId: 1234, name: "John", designation: "SE" },
+    { empId: 4567, name: "Tom", designation: "SSE" },
+    { empId: 8910, name: "Kevin", designation: "TA" },
+  ];
   return (
     <>
+      <h1 style={{ color: "green" }}>Welcome to React</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>EmpID</th>
+            <th>Name</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employees.map((employee) => {
+            return (
+              <tr key={employee.empId}>
+                <td>{employee.empId}</td>
+                <td>{employee.name}</td>
+                <td>{employee.designation}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      {element}
       <h2>Evaluating Expression</h2>
       <h3>
         {x}
