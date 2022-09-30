@@ -23,17 +23,47 @@ function App() {
   //   React.createElement("br", {}),
   //   React.createElement("button", { type: "submit" }, "Login")
   // );
+  let count = 5;
+  let name = {
+    firstName: "John",
+    lastName: "Doe",
+  };
+  let highlight = {
+    color: "blue",
+    backgroundColor: "gray",
+  };
+  var x = 25,
+    y = 30;
   return (
-    <form>
-      <h2>Login</h2>
-      <input type="text" placeholder="Name" />
-      <br />
-      <br />
-      <input type="password" placeholder="password" />
-      <br />
-      <br />
-      <input type="submit" nvalue="log" />
-    </form>
+    <>
+      <h2>Evaluating Expression</h2>
+      <h3>
+        {x}
+        {">"}
+        {y}
+        {":"}
+        {x > y ? "True" : "False"}
+      </h3>
+      <h1 style={highlight}>Welcome to React</h1>
+      <h1>
+        {name.firstName} {name.lastName}
+      </h1>
+      <h1>{count}</h1>
+      <h2>{count * count}</h2>
+      <h3>ReactJS:</h3>
+      <img src={logo} width="120" height="120" alt="" />
+      <p> React is a JavaScript library for creating User Interfaces.</p>
+      <form>
+        <h2>Login</h2>
+        <input type="text" placeholder="Name" />
+        <br />
+        <br />
+        <input type="password" placeholder="password" />
+        <br />
+        <br />
+        <input type="submit" nvalue="log" />
+      </form>
+    </>
   );
 }
 
