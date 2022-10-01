@@ -49,6 +49,7 @@ function App() {
   return (
     <>
       <h1 style={{ color: "green" }}>Welcome to React</h1>
+      <h1 style={{ color: "blue" }}>Welcome to the Jungle</h1>
       <table>
         <thead>
           <tr>
