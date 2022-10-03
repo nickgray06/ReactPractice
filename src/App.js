@@ -1,6 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
+import { Typography } from "@mui/material";
+import { Button as Button1 } from "@mui/material";
+import Product from "./components/Product";
 
 function App() {
   // return React.createElement(
@@ -48,9 +53,19 @@ function App() {
   ];
   return (
     <>
+      <Product />
       <h1 style={{ color: "green" }}>Welcome to React</h1>
       <h1 style={{ color: "blue" }}>Welcome to the Jungle</h1>
       <h1 style={{ color: "yellow" }}>Not all fun and games</h1>
+      <button className="button">Submit</button>
+      <button className="btn btn-success">Submit</button>
+      <Button variant="warning">Click here</Button>
+      <Typography variant="h4" gutterBottom>
+        Welcome to React
+      </Typography>
+      <Button1 variant="contained" color="primary">
+        Submit
+      </Button1>
       <table>
         <thead>
           <tr>
