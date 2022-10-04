@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Employee } from "./Employee";
 
 export const Employees = () => {
   const [employees, setEmployee] = useState([
@@ -15,29 +16,7 @@ export const Employees = () => {
   };
   return (
     <>
-      <table style={{ width: "60%" }} className="table">
-        <thead className="thead-light">
-          <tr>
-            <th>EmpID</th>
-            <th>Name</th>
-            <th>Designation</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map((employee) => {
-            return (
-              <tr key={employee.empId}>
-                <td>{employee.empId}</td>
-                <td>{employee.name}</td>
-                <td>{employee.designation}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <button className="btn btn-primary" onClick={addEmployee}>
-        Add an Employee
-      </button>
+      <Employee employees={employees} addEmployee={addEmployee} />
     </>
   );
 };
