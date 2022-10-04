@@ -6,6 +6,8 @@ import Button from "react-bootstrap/Button";
 import { Typography } from "@mui/material";
 import { Button as Button1 } from "@mui/material";
 import Product from "./components/Product";
+import DefectTracker from "./components/DefectTracker";
+import { Employees } from "./components/Employees";
 
 function App() {
   // return React.createElement(
@@ -53,6 +55,8 @@ function App() {
   ];
   return (
     <>
+      <DefectTracker />
+      <Employees />
       <Product />
       <h1 style={{ color: "green" }}>Welcome to React</h1>
       <h1 style={{ color: "blue" }}>Welcome to the Jungle</h1>
