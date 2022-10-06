@@ -63,6 +63,7 @@ function App() {
       <h1 style={{ color: "green" }}>Welcome to React</h1>
       <h1 style={{ color: "blue" }}>Welcome to the Jungle</h1>
       <h1 style={{ color: "yellow" }}>Not all fun and games</h1>
+      <h1 style={{ color: "teal" }}> Is Teal a color</h1>
       <button className="button">Submit</button>
       <button className="btn btn-success">Submit</button>
       <Button variant="warning">Click here</Button>
