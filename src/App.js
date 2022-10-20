@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import { Typography } from "@mui/material";
@@ -9,6 +9,7 @@ import Product from "./components/Product";
 import DefectTracker from "./components/DefectTracker";
 import { Employees } from "./components/Employees";
 import Card from "./components/Card";
+import Sample from "./components/Sample";
 
 function App() {
   // return React.createElement(
@@ -31,6 +32,7 @@ function App() {
   //   React.createElement("br", {}),
   //   React.createElement("button", { type: "submit" }, "Login")
   // );
+  const [name1, setName] = useState("Jack");
   let count = 5;
   let name = {
     firstName: "John",
@@ -56,6 +58,7 @@ function App() {
   ];
   return (
     <>
+      <Sample />
       <DefectTracker />
       <Employees />
       <Product />
@@ -79,6 +82,10 @@ function App() {
       <Button1 variant="contained" color="primary">
         Submit
       </Button1>
+      <div>
+        Your Name is : {name1} <br />
+        <button onClick={() => setName("Tom")}>Change</button>
+      </div>
       <table>
         <thead>
           <tr>
