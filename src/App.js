@@ -10,6 +10,7 @@ import DefectTracker from "./components/DefectTracker";
 import { Employees } from "./components/Employees";
 import Card from "./components/Card";
 import Sample from "./components/Sample";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   // return React.createElement(
@@ -63,6 +64,7 @@ function App() {
       <Employees />
       <Product />
       <Card />
+      <ProductDetails />
       <h1 style={{ color: "green" }}>Welcome to React</h1>
       <h1 style={{ color: "blue" }}>Welcome to the Jungle</h1>
       <h1 style={{ color: "yellow" }}>Not all fun and games</h1>
