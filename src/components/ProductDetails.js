@@ -19,7 +19,7 @@ export default function ProductDetails() {
   return (
     <div>
       {productDetails.map((productDetail) => (
-        <Product productDetail={productDetail} />
+        <Product {...productDetail} />
       ))}
     </div>
   );

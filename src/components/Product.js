@@ -5,23 +5,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Product(props) {
   const {
-    pdtCode,
+    // pdtCode,
     pdtPrice,
     pdtName,
-    pdtImage,
+    img,
     pdtDescription,
-    avgFeedback: rating,
+    // avgFeedback: rating,
+    rating,
   } = props.productDetail;
 
   return (
     <div className="thumbnail" style={{ textAlign: "center" }}>
       <div className="row>">
         <div className="col-sm-6">
-          <img
-            src={pdtImage}
-            alt=""
-            className="img img-rounded img-responsive"
-          />
+          <img src={img} alt="" className="img img-rounded img-responsive" />
         </div>
         <div className="col-sm-6">
           <div className={"caption"}>
