@@ -11,7 +11,7 @@ export default function Product(props) {
     img,
     pdtDescription,
     // avgFeedback: rating,
-    rating,
+    //rating,
   } = props.productDetail;
 
   return (
