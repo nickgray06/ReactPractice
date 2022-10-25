@@ -15,7 +15,7 @@ export const Login = () => {
       setSuccess("");
     } else {
       setSuccess("Login Succeesful");
-      setError("Error");
+      setError("");
     }
   };
 
