@@ -11,6 +11,7 @@ import { Employees } from "./components/Employees";
 import Card from "./components/Card";
 import Sample from "./components/Sample";
 import ProductDetails from "./components/ProductDetails";
+import { Login } from "./components/Login";
 
 function App() {
   // return React.createElement(
@@ -59,6 +60,7 @@ function App() {
   ];
   return (
     <>
+      <Login />
       <Sample />
       <DefectTracker />
       <Employees />
