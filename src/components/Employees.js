@@ -38,11 +38,13 @@ export const Employees = () => {
   const deleteEmployee = (empId) => {
     setSuccess("");
     let employeeId = parseInt(empId);
-    axios.delete("http://localhost:4000/employees" + employeeId).then((res) => {
-      axios.get("http://localhost:4000/employees").then((res) => {
-        setEmployee(res.data);
+    axios
+      .delete("http://localhost:4000/employees/" + employeeId)
+      .then((res) => {
+        axios.get("http://localhost:4000/employees").then((res) => {
+          setEmployee(res.data);
+        });
       });
-    });
   };
   return (
     <>
@@ -60,7 +62,7 @@ export const Employees = () => {
             employees.map((employee) => {
               return (
                 <tr key={employee.empId}>
-                  <td>{employee.empId}</td>
+                  <td>{employee.id}</td>
                   <td>{employee.name}</td>
                   <td>{employee.designation}</td>
                   <td>
