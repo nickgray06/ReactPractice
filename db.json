@@ -1,19 +1,44 @@
 {
-  "posts": [
+  "employees": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Lakshmi",
+      "designation": "Lead",
+      "id": 4523
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Jim",
+      "designation": "Senior Lead",
+      "id": 4573
+    },
+    {
+      "name": "Sally",
+      "designation": "Manager Lead",
+      "id": 4470
+    },
+    {
+      "name": "Nick",
+      "designation": "Senior Developer",
+      "id": 4375
+    },
+    {
+      "name": "Ryan",
+      "designation": "Backend Dev",
+      "id": 4912
+    },
+    {
+      "name": "Bob",
+      "designation": "Junior",
+      "id": 4545
+    },
+    {
+      "name": "Judy",
+      "designation": "Marketing",
+      "id": 4672
+    },
+    {
+      "name": "John",
+      "designation": "Principal",
+      "id": 4913
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
