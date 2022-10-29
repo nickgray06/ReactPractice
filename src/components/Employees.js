@@ -13,11 +13,20 @@ export const Employees = () => {
       .get("http://localhost:4000/employees")
       .then((result) => setEmployee(result.data));
   }, []);
+
   const [name, setName] = useState("");
   const [designation, setDesignation] = useState("");
   const [addFlag, setAddFlag] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
+  const [update, setUpdate] = useState(false);
+
+  let [empToBeUpdated, setEmpToBeUpdated] = useState({
+    id: 0,
+    name: "",
+    designation: "",
+  });
+
   const addEmployee = (e) => {
     e.preventDefault();
     setSuccess("");
@@ -35,11 +44,41 @@ export const Employees = () => {
       setDesignation("");
     }
   };
+
+  const findEmployee = (id) => {
+    let emp = employees.find(function(el) {
+      return el.id == id;
+    });
+    console.log(emp);
+    setEmpToBeUpdated(emp);
+  };
+
+  const updateEmpl = (e) => {
+    e.preventDefault();
+    axios
+      .put(
+        "http://localhost:4000/employees/" + empToBeUpdated.id,
+        empToBeUpdated
+      )
+      .then((res) => {
+        let index = employees.findIndex(
+          (employee) => employee.id == empToBeUpdated.id
+        );
+        let temp = [...employees];
+        temp[index] = res.data;
+        setEmployeegit(temp);
+        setMessage("Employee Updated Successfully!");
+      })
+      .catch(() => {
+        setMessage("Something went wrong!");
+      });
+  };
+
   const deleteEmployee = (empId) => {
     setSuccess("");
     let employeeId = parseInt(empId);
     axios
-      .delete("http://localhost:4000/employees/" + employeeId)
+      .delete("http://localhost:4000/employees/git " + employeeId)
       .then((res) => {
         axios.get("http://localhost:4000/employees").then((res) => {
           setEmployee(res.data);
@@ -78,6 +117,65 @@ export const Employees = () => {
           )}
         </tbody>
       </table>
+      <p>
+        {" "}
+        <button onClick={() => setUpdate(true)}>Update Employee</button>
+      </p>
+      {update ? (
+        <form>
+          <p>
+            Employee ID <br />
+            <select
+              onChange={(e) => {
+                findEmployee(e.target.value);
+              }}
+            >
+              <option value="">Select</option>
+              {employees.map((employee) => {
+                return (
+                  <option key={employee.id} value={employee.id}>
+                    {employee.id}
+                  </option>
+                );
+              })}
+            </select>
+          </p>
+          <p>
+            {" "}
+            Name <br />
+            <input
+              value={empToBeUpdated.name}
+              onChange={(e) => {
+                setEmpToBeUpdated({ ...empToBeUpdated, name: e.target.value });
+              }}
+            />
+          </p>
+          <p>
+            {" "}
+            Designation <br />
+            <input
+              value={empToBeUpdated.designation}
+              onChange={(e) => {
+                setEmpToBeUpdated({
+                  ...empToBeUpdated,
+                  designation: e.target.value,
+                });
+              }}
+            />
+          </p>
+          <p>
+            {" "}
+            <button
+              onClick={(e) => {
+                updateEmpl(e);
+              }}
+            >
+              Update
+            </button>{" "}
+          </p>
+        </form>
+      ) : null}
+      <p>{message}</p>
       <button onClick={() => setAddFlag(!addFlag)} className="btn btn-primary">
         Add Employee
       </button>{" "}
