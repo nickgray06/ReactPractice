@@ -66,7 +66,7 @@ export const Employees = () => {
         );
         let temp = [...employees];
         temp[index] = res.data;
-        setEmployeegit(temp);
+        setEmployee(temp);
         setMessage("Employee Updated Successfully!");
       })
       .catch(() => {
@@ -168,6 +168,7 @@ export const Employees = () => {
             <button
               onClick={(e) => {
                 updateEmpl(e);
+                setUpdate(false);
               }}
             >
               Update
