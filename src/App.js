@@ -13,6 +13,7 @@ import Sample from "./components/Sample";
 // import ProductDetails from "./components/ProductDetails";
 import { Login } from "./components/Login";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Header } from "./components/Header";
 
 function App() {
   // return React.createElement(
@@ -61,7 +62,13 @@ function App() {
   ];
   return (
     <>
-      <Login />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Login /> */}
       <Sample />
       <DefectTracker />
       <Employees />
