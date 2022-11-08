@@ -14,6 +14,7 @@ import Sample from "./components/Sample";
 import { Login } from "./components/Login";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Header } from "./components/Header";
+import { About } from "./components/About";
 
 function App() {
   // return React.createElement(
@@ -66,6 +67,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />} />
           <Route path="login" element={<Login />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
