@@ -64,8 +64,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={<Header />} />
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
         </Routes>
