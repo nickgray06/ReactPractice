@@ -15,6 +15,7 @@ import { Login } from "./components/Login";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Header } from "./components/Header";
 import { About } from "./components/About";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   // return React.createElement(
@@ -68,6 +69,7 @@ function App() {
         <Routes>
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
+          <Route path="contact" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
