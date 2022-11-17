@@ -70,11 +70,12 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="defect-tracker" element={<DefectTracker />} />
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
       <Sample />
-      <DefectTracker />
+
       <Employees />
       {/* <Product /> */}
       <Card />
