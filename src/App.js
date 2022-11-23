@@ -72,11 +72,12 @@ function App() {
           <Route path="contact" element={<ContactUs />} />
           <Route path="defect-tracker" element={<DefectTracker />} />
           <Route path="sample" element={<Sample />} />
+          <Route path="employees" element={<Employees />} />
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
 
-      <Employees />
+      {/* <Employees /> */}
       {/* <Product /> */}
       <Card />
       {/* <ProductDetails /> */}
