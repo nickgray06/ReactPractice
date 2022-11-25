@@ -10,6 +10,7 @@ export const Header = () => {
       <Link to="contact">Contact Us</Link>
       <Link to="sample">Sample</Link>
       <Link to="defect-tracker">Defect Tracker</Link>
+      <Link to="employees">Employees</Link>
     </nav>
   );
 };
