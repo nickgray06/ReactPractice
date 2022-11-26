@@ -73,6 +73,7 @@ function App() {
           <Route path="defect-tracker" element={<DefectTracker />} />
           <Route path="sample" element={<Sample />} />
           <Route path="employees" element={<Employees />} />
+          <Route path="productdetails" element={ProductDetails} />
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
