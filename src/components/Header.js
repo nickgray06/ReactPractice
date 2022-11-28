@@ -11,6 +11,7 @@ export const Header = () => {
       <Link to="sample">Sample</Link>
       <Link to="defect-tracker">Defect Tracker</Link>
       <Link to="employees">Employees</Link>
+      <Link to="productdetails">Product Details</Link>
     </nav>
   );
 };
