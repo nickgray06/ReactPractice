@@ -7,6 +7,7 @@ export default function Footer() {
       <ul>
         <li>Contact</li>
         <li>About</li>
+        <li>Terms</li>
       </ul>
     </div>
   );
